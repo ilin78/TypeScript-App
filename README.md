@@ -109,12 +109,16 @@ export const TodoForm: React.FC<TodoFormProps> = (props) => {}
 
 const App:React.FC = () => {
     const [todos, setTodos] = useState<ITodo[]>([])
-    const addHandler = (title: string) => {
+
+    // здесь тоже можно указать тип
+    const addHandler: ITodo = (title: string) => { 
+    
     const newTodo = {
         title: title,
         id: Date.now(),
         complited: false
     }
+    
     setTodos(prev=>[newTodo, ...todos])
     // console.log('Add New Todo', title);
 }
