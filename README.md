@@ -8,7 +8,7 @@
 npm install --save typescript @types/node @types/react @types/react-dom @types/jest 
 ```
 
-### 2. useRef и useState
+### 2. useRef и useState работа с Input
 
 #### Указываем React.FC и задаем тип в useState <string>
 
