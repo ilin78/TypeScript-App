@@ -101,7 +101,8 @@ export const TodoForm: React.FC<TodoFormProps> = (props) => {}
 
     
 ```tsx 
-    interface ITodo {
+
+interface ITodo {
     title: string
     id:number
     complited: boolean
