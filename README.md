@@ -83,7 +83,7 @@ export const TodoForm: React.FC = () => {
 export const TodoForm: React.FC<{onAdd(title: string):void}> = () => {}
 ```
     
-    2. Вариант задать interface и затем передать в скобки ```<TodoFormProps>```
+2. Вариант задать interface и затем передать в скобки  ``` <TodoFormProps> ```
     
 ```tsx 
 interface TodoFormProps {
