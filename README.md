@@ -115,7 +115,7 @@ const App:React.FC = () => {
         id: Date.now(),
         complited: false
     }
-    setTodos([newTodo, ...todos])
+    setTodos(prev=>[newTodo, ...todos])
     // console.log('Add New Todo', title);
 }
 ```
