@@ -8,9 +8,11 @@
 npm install --save typescript @types/node @types/react @types/react-dom @types/jest 
 ```
 
-### 2. Указываем React.FC и задаем тип <string>
+### 2. useRef и useState
 
-```jsx
+#### Указываем React.FC и задаем тип в useState <string>
+
+```tsx
 import React, { useState } from 'react';
 
 export const TodoForm: React.FC = () => {
@@ -36,6 +38,33 @@ export const TodoForm: React.FC = () => {
             onKeyPress={keyPressHandler}
             value={title}
             type="text" 
+        />
+    </div>
+}
+```
+    
+#### Этот же функционал на useRer
+```tsx
+import React, { useRef } from 'react';
+
+export const TodoForm: React.FC = () => {
+    const ref = useRef<HTMLInputElement>(null);
+
+
+    const keyPressHandler = (event: React.KeyboardEvent) => {
+        if (event.key === 'Enter') {
+            // TS считает, что ref может быть null, поэтому устновим ! знак
+            console.log(ref.current!.value)
+            ref.current!.value = ''
+        }
+    }
+
+    return <div>
+        <div>Введте название дела</div>
+        <input
+            onKeyPress={keyPressHandler}
+            ref={ref}
+            type="text"
         />
     </div>
 }
