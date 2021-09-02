@@ -111,10 +111,10 @@ interface ITodo {
 const App:React.FC = () => {
     const [todos, setTodos] = useState<ITodo[]>([])
 
-    // здесь тоже можно указать тип
-    const addHandler: ITodo = (title: string) => { 
-    
-    const newTodo = {
+    const addHandler = (title: string) => { 
+
+    // здесь тоже можно указать тип    
+    const newTodo: ITodo  = {
         title: title,
         id: Date.now(),
         complited: false
