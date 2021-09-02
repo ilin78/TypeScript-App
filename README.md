@@ -44,6 +44,7 @@ export const TodoForm: React.FC = () => {
 ```
     
 #### Этот же функционал на useRer
+    
 ```tsx
 import React, { useRef } from 'react';
 
@@ -69,3 +70,18 @@ export const TodoForm: React.FC = () => {
     </div>
 }
 ```
+    
+### 3. Передача функции в компонент
+    
+   Для этого необходимо явно указать, что ожидать:
+    
+    кампоненту ```<{}>``` - объект, которая содержит ```()``` - функцию типа ```void``` и что внутри этой функции принимает ```title``` - тип string
+    
+    ```tsx
+    export const TodoForm: React.FC<{onAdd(title: string):void}> = () => {
+    ```
+    
+    
+
+    
+
