@@ -98,24 +98,22 @@ export const TodoForm: React.FC<TodoFormProps> = (props) => {}
     
     Из interface будет определять тип всех параметров и передаваться в массив newTodo + ...todos
     
-    ```tsx 
+```tsx 
     interface ITodo {
-  title: string
-  id:number
-  complited: boolean
+    title: string
+    id:number
+    complited: boolean
 }
 
 const App:React.FC = () => {
-  const [todos, setTodos] = useState<ITodo[]>([])
-
-  const addHandler = (title: string) => {
-
+    const [todos, setTodos] = useState<ITodo[]>([])
+    const addHandler = (title: string) => {
     const newTodo = {
-      title: title,
-      id: Date.now(),
-      complited: false
+        title: title,
+        id: Date.now(),
+        complited: false
     }
     setTodos([newTodo, ...todos])
     // console.log('Add New Todo', title);
-  }
-    ```
+}
+```
