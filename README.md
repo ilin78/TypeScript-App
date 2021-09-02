@@ -78,9 +78,7 @@ export const TodoForm: React.FC = () => {
 кампоненту ```<{}>``` - объект, которая содержит () - функцию типа void и что внутри этой функции принимает title - тип string
     
 ```tsx
-    
     export const TodoForm: React.FC<{onAdd(title: string):void}> = () => {
-
     ```
     
     
