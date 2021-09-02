@@ -96,7 +96,9 @@ export const TodoForm: React.FC<TodoFormProps> = (props) => {}
     
 ### 4. Передача параметров в функцию
     
-    Из interface будет определять тип всех параметров и передаваться в массив newTodo + ...todos
+
+Из interface будет определять тип всех параметров и передаваться в массив newTodo + ...todos
+
     
 ```tsx 
     interface ITodo {
