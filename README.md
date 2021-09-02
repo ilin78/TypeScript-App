@@ -80,16 +80,17 @@ export const TodoForm: React.FC = () => {
 кампоненту ```<{}>``` - объект, которая содержит () - функцию типа void и что внутри этой функции принимает title - тип string
     
 ```tsx
-    export const TodoForm: React.FC<{onAdd(title: string):void}> = () => {}
+export const TodoForm: React.FC<{onAdd(title: string):void}> = () => {}
 ```
     
     2. Вариант задать interface и затем передать в скобки ```<TodoFormProps>```
     
-    ```tsx 
-    interface TodoFormProps {
+```tsx 
+interface TodoFormProps {
     onAdd(title: string) : void
 }
 
 export const TodoForm: React.FC<TodoFormProps> = () => {}
-    ```
+
+```
     
